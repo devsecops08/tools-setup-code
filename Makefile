@@ -1,3 +1,3 @@
-infra:   
-   terraform init
-   terraform apply -auto-approve
+infra: 			  
+	terraform init
+	terraform apply -auto-approve
