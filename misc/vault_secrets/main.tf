@@ -140,7 +140,7 @@ resource "vault_generic_secret" "rabbitmq" {
 EOT
 }
 
-###############
+###############n how do i consume secrets here by using a data source
 resource "vault_mount" "infra-secrets" {
   path        = "infra-secrets"
   type        = "kv"
