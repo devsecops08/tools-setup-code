@@ -30,10 +30,7 @@ resource "aws_security_group" "sg" {
     }
 }
 
-variable "vault_token" {}
-  
-
-
+ 
 resource "aws_instance"  "instance" {
 
   ami                    = data.aws_ami.ami.id
