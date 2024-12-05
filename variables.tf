@@ -15,3 +15,7 @@ variable "zone_id" {
 variable "domain_name" {
   default = "adevsecops08.online"
 }
+
+variable "vault_token" {
+  
+}
