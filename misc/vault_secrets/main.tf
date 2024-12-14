@@ -27,8 +27,8 @@ resource "vault_generic_secret" "frontend" {
 
   data_json = <<EOT
 {
-  "catalogue_url":   "http://catalogue-dev.adevsecops08:online:8080/",
-  "cart_url":   "http://cart-dev.adevsecops08:online:8080/",
+  "catalogue_url":   "http://catalogue-dev.adevsecops08.online:8080/",
+  "cart_url":   "http://cart-dev.adevsecops08.online:8080/",
   "user_url":   "http://user-dev.adevsecops08.online:8080/",
   "shipping_url":   "http://shipping-dev.adevsecops08.online:8080/",
   "payment_url":   "http://payment-dev.adevsecops08.online:8080/",
