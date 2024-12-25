@@ -26,7 +26,7 @@ resource "aws_security_group" "sg" {
     
   }
     tags = {
-      name ="${var.tool_name}"
+      name ="${var.tool_name}-sg"
     }
 }
 
@@ -36,12 +36,11 @@ resource "aws_instance"  "instance" {
   ami                    = data.aws_ami.ami.id
   instance_type          = var.instance_type
   vpc_security_group_ids = [aws_security_group.sg.id]
+
   tags = {
     Name = var.tool_name
   }
-  root_block_device {
-    volume_size = var.volume_size
-  }
+ 
 }
 
 
@@ -59,7 +58,7 @@ resource "aws_route53_record"  "record-internal" {
   name    = "${var.tool_name}-internal.${var.domain_name}"
   type    = "A"
   ttl     = "30"
-  records = [aws_instance.instance.private_ip]
+  records = [aws_instance.instance.public_ip]
 }
 
 

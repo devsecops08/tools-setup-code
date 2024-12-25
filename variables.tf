@@ -10,12 +10,9 @@ variable "tools"  {
 }
 
 variable "zone_id" {
-  default = "Z04036722QT9R780VLSOQ"
+  default = "Z0285213QK7SB76TI5I9"
 }
 variable "domain_name" {
   default = "adevsecops08.online"
 }
 
-variable "vault_token" {
-  
-}
