@@ -138,8 +138,6 @@ resource "vault_generic_secret" "rabbitmq" {
 EOT
 }
 
-
-
 ###############
 resource "vault_mount" "infra-secrets" {
   path        = "infra-secrets"
