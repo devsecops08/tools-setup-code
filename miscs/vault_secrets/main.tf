@@ -139,6 +139,7 @@ EOT
 }
 
 
+
 ###############
 resource "vault_mount" "infra-secrets" {
   path        = "infra-secrets"
@@ -157,4 +158,3 @@ resource "vault_generic_secret" "ssh" {
 }
 EOT
 }
-
