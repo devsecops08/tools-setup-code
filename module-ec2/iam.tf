@@ -16,7 +16,20 @@ resource "aws_iam_role" "role" {
 }
 EOF
 
-  tags = {
+  inline_policy {
+    name = "${var.tool_name}-inline-role"          
+   policy = jsonencode({
+      Version = "2012-10-17"
+      Statement = [
+        {
+          Action   = var.policy_list
+          Effect   = "Allow"
+          Resource = "*"
+        },
+      ]
+    })
+  }
+ tags = {
     name = "${var.tool_name}-role"
   }
 }
