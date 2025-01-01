@@ -11,7 +11,7 @@ variable "tools"  {
       port= 80
       volume_size= 20
       instance_type="t3.small"
-      policy_list= ["ec2:*","route53:*"]
+      policy_list= ["*"]
     }
 
 }
