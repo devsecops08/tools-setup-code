@@ -67,7 +67,7 @@
   ansible.builtin.dnf:
     name : terraform
     state: installed
-#installing the k8s 
+    
 - name: Copy kubernetes repo
   ansible.builtin.copy:
     src: kubernetes.repo
